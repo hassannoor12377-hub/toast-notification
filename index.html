@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="outerbox1">
+    <div class="toasterbox">
+        <h1 class="toasterhead">Toastr Configurator</h1>
+
+        <div class="box1">
+            <p class="title">Title</p>
+            <input type="text" placeholder="Enter a Title..." class="textarea">
+            <p class="messagetext">Message</p>
+            <input type="text" placeholder="Enter a Message..." class="textarea2">
+
+<label>
+            <div class="outerboxcheck">
+                
+            <input type="checkbox" class="btn1">
+            <p class="close">Close Button</p>
+            
+            </div>
+            </label>
+
+            <label>
+            <div class="outerboxcheck">
+            <input type="checkbox" class="btn1">
+            <p class="close">Add behavior on toast click</p>
+            </div>
+            </label>
+
+
+            <label>
+            <div class="outerboxcheck">
+            <input type="checkbox" class="btn1">
+            <p class="close">Add behavior on toast close button click</p>
+            </div>
+             </label>
+
+
+             <label>
+            <div class="outerboxcheck">
+            <input type="checkbox" class="btn1">
+            <p class="close">Debug</p>
+            </div>
+            </label>
+
+            <div class="outerboxcheck">
+            <input type="checkbox" class="btn1">
+            <p class="close">Progress Bar</p>
+            </div>
+
+
+            <div class="outerboxcheck">
+            <input type="checkbox" class="btn1">
+            <p class="close">Right-To-Left</p>
+            </div>
+
+
+            <div class="outerboxcheck">
+            <input type="checkbox" class="btn1">
+            <p class="close">Prevent Duplicates</p>
+            </div>
+
+
+            <div class="outerboxcheck">
+            <input type="checkbox" class="btn1">
+            <p class="close">Add button to force clearing a toast</p>
+            </div>
+
+
+            <div class="outerboxcheck">
+                <!-- <input type="checkbox" name="check" id="btn1"> -->
+            <input type="checkbox" class="btn1">
+            <p class="close">Newest on top</p>
+            </div>
+
+<div class="secbox">
+    <p class="tosttype">Toast Type</p>
+
+    <div class="checkouterbox">
+      <label>
+  <input type="radio" name="Type" class="circle-radio" id="Success">
+  <!-- <p class="sucessoption">Success</p> -->
+   Success
+</label>
+
+
+    </div>
+
+
+     <div class="checkouterbox">
+    <label>
+  <input type="radio" name="Type" class="circle-radio" id="Info">
+  <!-- <p class="sucessoption">Info</p> -->
+  Info
+</label>
+
+
+    </div>
+
+
+     <div class="checkouterbox">
+    <label>
+  <input type="radio" name="Type" class="circle-radio" id="Warning">
+ <!-- <p class="sucessoption">Warning</p> -->
+  Warning
+</label>
+
+
+    </div>
+
+
+     <div class="checkouterbox">
+  <label>
+  <input type="radio" name="Type" class="circle-radio" id="Error">
+  Error
+</label>
+</div>
+
+
+
+<!-- position section -->
+
+<p class="positiontype">Position</p>
+
+    <div class="checkouterbox">
+  <label>
+  <input type="radio" name="toastPosition" class="circle-radio1" id="Top-Right">
+ <p class="sucessoption">Top Right</p>
+</label>
+</div>
+
+
+
+    <div class="checkouterbox">
+  <label>
+  <input type="radio" name="toastPosition" class="circle-radio1" id="Bottom-Right">
+ <p class="sucessoption">Bottom Right</p>
+</label>
+</div>
+
+
+
+    <div class="checkouterbox">
+  <label>
+  <input type="radio" name="toastPosition" class="circle-radio1" id="Bottom-Left">
+ <p class="sucessoption">Bottom Left</p>
+</label>
+</div>
+
+
+
+    <div class="checkouterbox">
+  <label>
+  <input type="radio" name="toastPosition" class="circle-radio1" id="Top-Left">
+ <p class="sucessoption">Top Left</p>
+</label>
+</div>
+
+
+
+    <div class="checkouterbox">
+  <label>
+  <input type="radio" name="toastPosition" class="circle-radio1" id="Top-Full-Width">
+ <p class="sucessoption">Top Full Width</p>
+</label>
+</div>
+
+
+
+    <div class="checkouterbox">
+  <label>
+  <input type="radio" name="toastPosition" class="circle-radio1" id="Bottom-Full-Width">
+ <p class="sucessoption">Bottom Full Width</p>
+</label>
+</div>
+
+
+
+    <div class="checkouterbox">
+  <label>
+  <input type="radio" name="toastPosition" class="circle-radio1" id="Top-Center">
+ <p class="sucessoption">Top Center</p>
+</label>
+</div>
+
+
+
+    <div class="checkouterbox">
+  <label>
+  <input type="radio" name="toastPosition" class="circle-radio1" id="Bottom-Center">
+ <p class="sucessoption">Bottom Center</p>
+</label>
+</div>
+
+
+
+ 
+<!--  -->
+
+    
+</div>
+
+        </div>
+      
+
+        <button class="showtoast">show Toast</button>
+        <div class="boxhide"></div>
+
+
+        <!-- ////// -->
+<!-- Button -->
+
+
+<!-- Toasts ka container -->
+<div class="toast-container"></div>
+
+
+        <!-- ////// -->
+    </div>
+    
+</div>
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+</html>

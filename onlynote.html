@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notification</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+        background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    }
+
+    main {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .sub-main {
+        background-color: white;
+        width: 100%;
+        max-width: 800px;
+        padding: 25px;
+        border-radius: 20px;
+        box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    /* Left side inputs */
+    .inputs {
+        flex: 1 1 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-right: 20px;
+        border-right: 2px solid #f0f0f0;
+    }
+
+    .inputs label {
+        font-weight: 500;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .inputs input {
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        outline: none;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+    .inputs input:focus {
+        border-color: #4a90e2;
+        box-shadow: 0 0 5px rgba(74,144,226,0.3);
+    }
+
+    /* Right side radio options */
+    .radio-inputs {
+        flex: 1 1 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .radio-inputs h1 {
+        font-size: 18px;
+        color: #4a4a4a;
+        margin-bottom: 10px;
+    }
+
+    .radio-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .radio-group label {
+        background-color: #f7f7f7;
+        padding: 8px 15px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background 0.3s;
+        border: 1px solid #ddd;
+    }
+
+    .radio-group input {
+        margin-right: 6px;
+        accent-color: #4a90e2;
+    }
+
+    .radio-group label:hover {
+        background-color: #e8f0fe;
+    }
+
+    /* Button container */
+    .button-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .btn {
+        background-color: #4a90e2;
+        color: white;
+        padding: 12px 25px;
+        border-radius: 8px;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .btn:hover {
+        background-color: #357abd;
+    }
+    .fixed-div {
+        height: auto;
+        width: 280px;
+        border: 1px solid #000;
+        position: fixed;
+        /* top: 20px;
+        right: 20px; */
+    }
+    .toaster {
+        height: 50px;
+        width: 100%;
+        margin-top: 10px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    /* Js Classes */
+    .success {
+        background-color: green;
+    }   
+    .info {
+        background-color: #4a90e2
+        
+    }
+    .warning {
+        background-color: gold;
+        
+    }
+    .error {
+        background-color: red;
+
+    }
+
+    .topRight {
+      top: 20px;
+      right: 20px;
+    }
+    .bottomRight {
+      bottom: 20px;
+      right: 20px;
+      
+    }
+    .bottomLeft {
+      bottom: 20px;
+      left: 20px;
+      
+    }
+    .topLeft {
+      top: 20px;
+      left: 20px;
+
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 700px) {
+        .sub-main {
+            flex-direction: column;
+            padding: 20px;
+        }
+        .inputs {
+            border-right: none;
+            padding-right: 0;
+        }
+    }
+</style>
+</head>
+<body>
+
+<main>
+    <div>
+        <div class="sub-main">
+            <!-- Left inputs -->
+            <div class="inputs">
+                <label for="title">Title
+                    <input id="title" type="text" placeholder="Enter Title">
+                </label>
+                <label for="msg">Message
+                    <input id="msg" type="text" placeholder="Enter Message">
+                </label>
+            </div>
+
+            <!-- Right radio groups -->
+            <div class="radio-inputs">
+                <div>
+                    <h1>Toast Type</h1>
+                    <div class="radio-group">
+                        <label><input type="radio" name="toastType" id="success" class="colors-input"> Success</label>
+                        <label><input type="radio" name="toastType" id="info" class="colors-input" checked> Info</label>
+                        <label><input type="radio" name="toastType" id="warning" class="colors-input"> Warning</label>
+                        <label><input type="radio" name="toastType" id="error" class="colors-input"> Error</label>
+                    </div>
+                </div>
+                <div>
+                    <h1>Positions</h1>
+                    <div class="radio-group">
+                        <label><input type="radio" name="position" id="topRight" class="position-input" checked> Top Right</label>
+                        <label><input type="radio" name="position" id="bottomRight" class="position-input"> Bottom Right</label>
+                        <label><input type="radio" name="position" id="bottomLeft" class="position-input"> Bottom Left</label>
+                        <label><input type="radio" name="position" id="topLeft" class="position-input"> Top Left</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Button -->
+        <div class="button-container">
+            <button class="btn">Show Toast</button>
+        </div>
+        <div class="fixed-div"></div>
+    </div>
+</main>
+
+<script>
+
+    let buttonEl = document.querySelector('.btn'),
+        titleInput = document.getElementById('title'),
+        msgInput = document.getElementById('msg'),
+        colorsInput = document.querySelectorAll('.colors-input'),
+        positionInput = document.querySelectorAll('.position-input'),
+        fixedDiv = document.querySelector('.fixed-div')
+
+    let notificationMsg = ['Lahore', "Karachi", "Islamabad", "Multan", "Peshawar"]
+
+    buttonEl.addEventListener('click', function() {
+        
+        let notifDiv = document.createElement('div');
+        notifDiv.classList.add('toaster')
+        fixedDiv.append(notifDiv)
+
+        if( titleInput.value == "" && msgInput.value == "" ){
+            notifDiv.innerHTML = notificationMsg[Math.floor( Math.random() * notificationMsg.length )]
+        }
+        else if( titleInput.value || msgInput.value ){
+            notifDiv.innerHTML = `
+                <strong>${titleInput.value}</strong>
+                <p>${msgInput.value}</p>
+            `
+        }
+
+
+        for( let clrInput of colorsInput ){
+            console.log(clrInput);
+
+            if( clrInput.checked ) {
+                let value = clrInput.id
+                console.log('Value of id Attribute: ', value);
+                
+                notifDiv.classList.add(value)
+            }
+            
+        } 
+
+
+        for( let pRadioInp of positionInput ) {
+          console.log(pRadioInp);
+
+          if( pRadioInp.checked ) {
+            let idValue = pRadioInp.id
+            console.log(idValue);
+
+            fixedDiv.className = 'fixed-div'
+            fixedDiv.classList.add(idValue)
+
+            console.log(fixedDiv);
+            
+          }
+          
+        }
+
+    })
+
+
+    /////////////////////////////////////////////////////////////////////
+
+    // let arr = ['one', 'two', 'three']
+
+    // console.log(arr);
+    
+    // for( let i = 0; i < 3; i++ ){
+    //   console.log(arr[i], i);
+      
+    // }
+
+    // Destructure
+
+    // let gender = ['female', 'male']
+
+    // let [girl, man] = gender
+
+    // console.log(girl);
+    
+
+
+    // for( let [ index, element ] of arr.entries() ) {  // we get an array with index and element in pair form.
+    //    console.log(index, element);
+      
+    // }
+
+</script>
+
+</body>
+</html>

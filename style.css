@@ -1,0 +1,213 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.outerbox1{
+    height: 120vh;
+    width: 100%;
+    /* border: solid 1px; */
+}
+.toasterbox{
+    height: 110vh;
+    width: 80%;
+    /* border: solid 1px; */
+    margin: auto;
+    /* margin-top: 5%; */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    /* display: flex; */
+    border-radius: 10px;
+    padding: 1px;
+    
+}
+.toasterhead{
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 21px;
+    margin-left: 20px;
+    margin-top: 20px;
+    color: #6779A7;
+
+}
+.box1{
+    height: 100vh;
+    width: 20%;
+    /* border: solid 1px; */
+    margin-left: 20px;
+}
+
+.title{
+    font-size: 14px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin-top: 10px;
+
+}
+
+.textarea{
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-top: 10px;
+    border: 0.01px solid;
+    color: black;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+}
+
+.messagetext{
+    font-size: 14px;
+font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+margin-top: 20px;
+margin-top: 10px;
+}
+.textarea2{
+    height: 70px;
+    width: 200px;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-top: 10px;
+    border: 0.01px solid;
+}
+.outerboxcheck{
+    height: 50px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.close{
+    font-size: 14px;
+    margin-left: 10px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color: rgb(73, 80, 87);
+    cursor: pointer;
+}
+
+
+
+.secbox{
+    height: 100vh;
+    width: 300px;
+    /* border: solid 1px; */
+    position: absolute;
+    top: 40px;
+    left: 400px;
+    
+}
+.tosttype{
+    font-size: 20px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin-top: 10px;
+}
+
+.checkouterbox{
+    height: 30px;
+    width: 200px;
+    /* border: solid 1px; */
+}
+.circle1{
+   border-radius: 50%;
+    
+}
+/*  */
+/*  */
+
+
+.circle-radio{
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+}
+
+
+.sucessoption{
+    font-size: 14px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    display: inline-block;
+    color: rgb(73, 80, 87);
+}
+
+.positiontype{
+    font-size: 20px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin-top: 5px;
+
+}
+.showtoast{
+    height: 40px;
+    width: 100px;
+    background-color: #58CD91;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 14px;
+    position: absolute;
+    right: 150px;
+    top: 100%;
+    cursor: pointer;
+
+}
+
+
+
+.toaster {
+        height: 50px;
+        width: 100%;
+        margin-top: 10px;
+        color: black;
+        border: solid 1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+
+
+
+.toast-container {
+  height: 200px;
+  width: 200px;
+  top: 20px;
+  right: 20px;
+  position: fixed;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* border: solid 1px red; */
+ 
+  
+  
+}
+
+
+
+
+
+
+
+
+/* Toast Type Colors */
+.Success { background: green; }
+.Error   { background: red; }
+.Info    { background: blue; }
+.Warning    { background: gray; }
+
+/*  */
+
+
+
+.Top-Right { top: 20px; right: 20px;  }
+.Bottom-Right { bottom: 20px; right: 20px;  }
+.Bottom-Left { bottom: 20px; left: 20px; }
+.Top-Left { top: 20px; left: 20px; }
+.Top-Center { top: 20px; left: 50%;  }
+.Bottom-Center { bottom: 20px; left: 50%;  }
+.Top-Full-Width { top: 0; left: 0; width: 100%;  }
+.Bottom-Full-Width { bottom: 0; left: 0; width: 100%; }
